@@ -1,0 +1,14 @@
+[alias]
+    s = status --short
+    co = checkout
+    amend = commit --amend --no-edit
+    po = !git push --set-upstream origin "$(git rev-parse --abbrev-ref HEAD)"
+[user]
+    email = to.karwowski@gmail.com
+    name = Tomek Karwowski
+[pull]
+    ff = only
+[core]
+    editor = vim
+[init]
+    defaultBranch = main
