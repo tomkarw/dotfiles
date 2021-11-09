@@ -79,6 +79,8 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
+inoremap <Esc> <Esc>:w<CR>
+
 " w!! - save file even if sudo permissons are required
 cnoremap w!! execute `silent! write !sudo tee % >/dev/null' <bar> edit!
 
