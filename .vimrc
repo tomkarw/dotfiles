@@ -120,11 +120,12 @@ filetype plugin indent on
 set tabstop=4
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
+" when indenting with TAB, use 4 spaces width
+set softtabstop=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
-autocmd Filetype ts setlocal tabstop=2 shiftwidth=2
-autocmd Filetype js setlocal tabstop=2 shiftwidth=2
+autocmd Filetype js,ts,html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 " refresh NERDTree on each toggle
 map <C-n> :call NERDTreeToggleAndRefresh()<CR>

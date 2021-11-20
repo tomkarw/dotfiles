@@ -127,3 +127,11 @@ export PATH="$WASMTIME_HOME/bin:$PATH"
 export TSC_WATCHFILE=UseFsEventsWithFallbackDynamicPolling
 
 # Aliases
+alias n=nvim
+
+alias g=git
+alias gs="git status --short"
+alias gp="git push"
+alias gl="git log -n 5 --oneline --color=always | cat"
+
+alias activate=", venv/bin/activate"
