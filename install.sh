@@ -34,6 +34,14 @@ rustup target add wasm32-wasi
 cargo install cargo-edit
 cargo install du-dust ripgrep fd-find
 
+# Rust speedup with better linker
+sudo pacman -S lld
+cargo install -f cargo-binutils
+rustup component add llvm-tools-preview
+
+# Depenedencies for game dev (Bevy to be precise)
+sudo pacman -S libx11 pkgconf alsa-lib
+
 # nvm - node version manager
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 nvm install node
@@ -49,3 +57,12 @@ cd ~
 
 # install Chromium
 pacman -S chromium
+
+# install Docker
+sudo pacman -S docker
+sudo systemctl start docker.service
+sudo systemctl enable docker.service
+sudo groupadd docker
+sudo usermod -aG docker $USER
+su - $USER # refresh groups
+
