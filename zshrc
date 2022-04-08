@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git docker npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,40 +98,20 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# python setup
-alias python=python3.9
-alias python3=python3.9
-
-# add binaryen utils to PATH (wasm-opt, etc.)
-export PATH="$PATH:/home/tomek/apps/binaryen/bin"
-
 # nvm, node version manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# add antmicro private key
-ssh-add ~/.ssh/antmicro_rsa > /dev/null
-
 # Wasmer
-export WASMER_DIR="/home/tomek/.wasmer"
-[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+# export WASMER_DIR="/home/tomek/.wasmer"
+# [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 
 # Enable vi mode
 bindkey -v
-
-export WASMTIME_HOME="$HOME/.wasmtime"
-export PATH="$WASMTIME_HOME/bin:$PATH"
 
 # Better CPU usage for tsc --watch
 export TSC_WATCHFILE=UseFsEventsWithFallbackDynamicPolling
 
 # Aliases
 alias n=nvim
-
-alias g=git
-alias gs="git status --short"
-alias gp="git push"
-alias gl="git log -n 5 --oneline --color=always | cat"
-
-alias activate=", venv/bin/activate"

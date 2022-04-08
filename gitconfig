@@ -12,3 +12,5 @@
     editor = vim
 [init]
     defaultBranch = main
+[diff]
+	external = difft
